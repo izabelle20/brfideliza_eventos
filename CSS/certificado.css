@@ -1,0 +1,82 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adicionei um padding para espaçamento interno */
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px; /* Ajustei a margem para 10px em todas as direções */
+}
+
+#menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu img {
+    width: 40px;
+}
+
+h1{
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
+
+/* Estilo do contêiner principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Mínimo de 100% da altura da viewport */
+    margin-top: 20px; /* Reduzi a margem superior para 20px */
+}
+
+/* Estilo do alerta */
+.alert {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 50%; /* Ocupa no máximo 50% da largura do contêiner */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Centraliza o alerta e adiciona margem nas laterais */
+}
+
+.alert a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.alert a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do rodapé */
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto; /* Empurra o rodapé para a parte inferior */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}

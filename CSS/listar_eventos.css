@@ -1,0 +1,157 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da barra de navegação */
+.tab {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu img {
+    width: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+button {
+    padding: 8px 16px;
+    background-color: #A91528;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px; /* Espaçamento entre os botões */
+}
+button:hover {
+    background-color: #871220;
+}
+
+/* Estilo do formulário de filtro */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 8px 16px;
+    background-color: #A91528;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilo da tabela de eventos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td {
+    background-color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo dos status dos eventos */
+.status-ativo {
+    color: green;
+    font-weight: bold;
+}
+
+.status-inativo {
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilo do rodapé */
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.rodape {
+    color: white;
+    text-align: center;
+}

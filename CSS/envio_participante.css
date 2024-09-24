@@ -1,0 +1,134 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da barra de navegação */
+.tab {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu img {
+    width: 40px;
+}
+
+/* Container Principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.alert {
+    background-color: #f8d7da; /* Cor de fundo do alerta */
+    color: #721c24; /* Cor do texto do alerta */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb; /* Cor da borda do alerta */
+    border-radius: 5px;
+}
+
+.alert a {
+    color: #721c24; /* Cor do link no alerta */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Formulário */
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form select, form textarea, form input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #A91528; /* Cor de fundo do botão */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #721c24; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Ajustes para o rodapé fixo */
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.rodape {
+    color: white;
+}
+
+/* Estilo específico para telas menores */
+@media (max-width: 768px) {
+    .navbar #menu {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar #menu a {
+        display: block;
+        margin: 5px 0;
+    }
+}

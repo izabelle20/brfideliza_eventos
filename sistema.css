@@ -1,0 +1,128 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #A91528;
+}
+
+#navbar_marca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+#logo img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#menu {
+    display: flex;
+    gap: 15px;
+}
+
+#menu a img {
+    width: 30px;
+}
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo para os links */
+.container a {
+    text-decoration: none;
+    color: #A91528;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #A91528;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #8b1121;
+}
+
+/* Estilo para a mensagem de boas-vindas */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #A91528;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .container a {
+        display: block;
+        margin: 5px 0;
+    }
+}

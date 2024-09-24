@@ -1,0 +1,320 @@
+CREATE DATABASE  IF NOT EXISTS `projeto_eventos01` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `projeto_eventos01`;
+-- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+--
+-- Host: localhost    Database: projeto_eventos01
+-- ------------------------------------------------------
+-- Server version	8.0.34
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `empresa`
+--
+
+DROP TABLE IF EXISTS `empresa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `empresa` (
+  `idEmpresa` int NOT NULL,
+  `nomeFantasia` varchar(45) NOT NULL,
+  `hashEmpresa` varchar(45) DEFAULT NULL,
+  `razaoSocial` varchar(75) DEFAULT NULL,
+  `telefoneEmpresa` char(13) NOT NULL,
+  `CNPJ(14)` char(14) DEFAULT NULL,
+  `endereco` varchar(95) DEFAULT NULL,
+  `bairro` varchar(45) DEFAULT NULL,
+  `cidade` varchar(45) DEFAULT NULL,
+  `uf` char(2) DEFAULT NULL,
+  `cep` char(10) DEFAULT NULL,
+  `locLogitude` varchar(45) DEFAULT NULL,
+  `locLatitude` varchar(45) DEFAULT NULL,
+  `sigla` char(7) DEFAULT NULL,
+  `email` varchar(75) NOT NULL,
+  `senha` varchar(45) DEFAULT NULL,
+  `ativo` bit(1) NOT NULL,
+  `dataRegistro` timestamp NULL DEFAULT NULL,
+  `Propietario` int NOT NULL,
+  `hashNovaSenha` varchar(45) NOT NULL,
+  `hashNovaSenhaData` datetime DEFAULT NULL,
+  `dataUltimaAtualizacao` timestamp NOT NULL,
+  `codAfiliado` varchar(45) DEFAULT NULL,
+  `codAfiliadoUtilizado` varchar(45) DEFAULT NULL,
+  `pixType` varchar(15) DEFAULT NULL,
+  `pixKey` varchar(45) DEFAULT NULL,
+  `pixDuration` int NOT NULL,
+  `empCpfCnpj` varchar(14) DEFAULT NULL,
+  `gatSurrogateKey` varchar(45) DEFAULT NULL,
+  `pixEstatico` bit(1) NOT NULL,
+  `vlPixTransacao` decimal(5,2) NOT NULL,
+  `empImgCapa` varchar(100) DEFAULT NULL,
+  `taxaReter` bit(1) DEFAULT NULL,
+  `taxaReterDtInicio` timestamp NOT NULL,
+  `taxaReterQtdGratuita` smallint DEFAULT NULL,
+  PRIMARY KEY (`idEmpresa`),
+  KEY `fk_table1_Pessoa_idx` (`Propietario`),
+  CONSTRAINT `fk_table1_Pessoa` FOREIGN KEY (`Propietario`) REFERENCES `pessoa` (`idPessoa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `empresa`
+--
+
+LOCK TABLES `empresa` WRITE;
+/*!40000 ALTER TABLE `empresa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `empresa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `evento`
+--
+
+DROP TABLE IF EXISTS `evento`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `evento` (
+  `idEvento` int NOT NULL,
+  `eveTitulo` varchar(100) NOT NULL,
+  `eveTituloHash` varchar(100) NOT NULL,
+  `eveDescricao` text NOT NULL,
+  `eveLocal` varchar(100) NOT NULL,
+  `eveData` datetime NOT NULL,
+  `eveDtIniInscricao` datetime NOT NULL,
+  `eveDtFimInscricao` datetime NOT NULL,
+  `eveVlIngresso` decimal(10,2) NOT NULL,
+  `eveVlComDesconto` decimal(10,2) NOT NULL,
+  `eveAtivo` bit(1) NOT NULL,
+  `empresa_idEmpresa` int NOT NULL,
+  `eveImgCapa` varchar(100) DEFAULT NULL,
+  `eveVagas` int DEFAULT NULL,
+  `eveVagasTolerancia` int DEFAULT NULL,
+  `eveVagasQtdInscritos` int DEFAULT NULL,
+  `eveVagasQtdConfirmados` int DEFAULT NULL,
+  `eveVagasQtdPagos` int DEFAULT NULL,
+  `eveInscricaoLimitePorVagas` bit(1) DEFAULT NULL,
+  `eveInscricaoLimitePorHorario` bit(1) DEFAULT NULL,
+  `eveRequisitarInstagram` bit(1) DEFAULT NULL,
+  `eveRequisitarObs1` bit(1) DEFAULT NULL,
+  `eveRequisitarObs2` bit(1) DEFAULT NULL,
+  `eveLabelNomeCompleto` varchar(45) DEFAULT NULL,
+  `eveLabelObs1` varchar(45) DEFAULT NULL,
+  `eveLabelObs2` varchar(45) DEFAULT NULL,
+  `eveVariasInscricoesPorPessoa` bit(1) DEFAULT NULL,
+  `eveQtdHorasExpiraPgto` int DEFAULT NULL,
+  `eveIdadeMin` int DEFAULT NULL,
+  `eveIdadeMax` int DEFAULT NULL,
+  PRIMARY KEY (`idEvento`),
+  KEY `fk_eve_empresa1_idx` (`empresa_idEmpresa`),
+  CONSTRAINT `fk_eve_empresa1` FOREIGN KEY (`empresa_idEmpresa`) REFERENCES `empresa` (`idEmpresa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `evento`
+--
+
+LOCK TABLES `evento` WRITE;
+/*!40000 ALTER TABLE `evento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `evento` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `inscricao`
+--
+
+DROP TABLE IF EXISTS `inscricao`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `inscricao` (
+  `idInscricao` int NOT NULL AUTO_INCREMENT,
+  `insDataRegistro` datetime NOT NULL,
+  `evento_idEvento` int NOT NULL,
+  `pedido_idPedido` int NOT NULL,
+  `user_nome_utilizado` varchar(100) DEFAULT NULL,
+  `user_telefone_utilizado` char(13) DEFAULT NULL,
+  `user_email_utilizado` varchar(100) DEFAULT NULL,
+  `user_instagram` varchar(100) DEFAULT NULL,
+  `user_obs1` varchar(200) DEFAULT NULL,
+  `user_obs2` varchar(200) DEFAULT NULL,
+  `ins_confirmada` bit(1) NOT NULL,
+  `ins_confirmada_data` datetime DEFAULT NULL,
+  `ins_confirmada_metodo` char(1) DEFAULT NULL,
+  `ins_confirmada_user` varchar(100) DEFAULT NULL,
+  `ins_confirmada_obs` text,
+  `ins_presente` bit(1) NOT NULL,
+  `ins_presente_data` datetime DEFAULT NULL,
+  `ins_presente_metodo` char(1) DEFAULT NULL,
+  `ins_presente_user` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idInscricao`),
+  KEY `fk_inscricao_evento1_idx` (`evento_idEvento`),
+  KEY `fk_inscricao_pedido1_idx` (`pedido_idPedido`),
+  CONSTRAINT `fk_inscricao_evento1` FOREIGN KEY (`evento_idEvento`) REFERENCES `evento` (`idEvento`),
+  CONSTRAINT `fk_inscricao_pedido1` FOREIGN KEY (`pedido_idPedido`) REFERENCES `pedido` (`idPedido`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `inscricao`
+--
+
+LOCK TABLES `inscricao` WRITE;
+/*!40000 ALTER TABLE `inscricao` DISABLE KEYS */;
+/*!40000 ALTER TABLE `inscricao` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pagamento`
+--
+
+DROP TABLE IF EXISTS `pagamento`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pagamento` (
+  `idPagamento` int NOT NULL,
+  `pag_data_registro` timestamp NOT NULL,
+  `pag_data_last_update` timestamp NOT NULL,
+  `pag_tipo` varchar(45) NOT NULL,
+  `pag_method` varchar(45) NOT NULL,
+  `pag_valor` decimal(10,2) NOT NULL,
+  `pag_descricao` varchar(45) NOT NULL,
+  `pag_status` char(1) NOT NULL,
+  `parcela_numero` int NOT NULL,
+  `pedido_idPedido` int NOT NULL,
+  `parcela_dt_vencimento` datetime DEFAULT NULL,
+  `parcela_dt_pagamento` datetime DEFAULT NULL,
+  `url_callback` varchar(100) DEFAULT NULL,
+  `cliente_nome` varchar(45) DEFAULT NULL,
+  `cliente_telefone` varchar(45) DEFAULT NULL,
+  `cliente_documento` varchar(45) DEFAULT NULL,
+  `cliente_documento_valor` varchar(100) DEFAULT NULL,
+  `cliente_ip` varchar(45) DEFAULT NULL,
+  `cliente_session` varchar(255) DEFAULT NULL,
+  `cliente_device` varchar(255) DEFAULT NULL,
+  `transaction_uuid` varchar(255) DEFAULT NULL,
+  `transaction_order_id` varchar(255) DEFAULT NULL,
+  `transaction_status_cod` varchar(255) DEFAULT NULL,
+  `transaction_status_desc` varchar(45) DEFAULT NULL,
+  `pix_type` varchar(15) DEFAULT NULL,
+  `pix_key` varchar(45) DEFAULT NULL,
+  `pix_merchant_name` varchar(25) DEFAULT NULL,
+  `pix_merchant_city` varchar(15) DEFAULT NULL,
+  `pix_tx_id` varchar(25) DEFAULT NULL,
+  `pix_qrcode_code_payment` varchar(255) DEFAULT NULL,
+  `pix_qrcode_image64` varchar(45) DEFAULT NULL,
+  `pix_gateway_emv` varchar(255) DEFAULT NULL,
+  `pix_gateway_qrcodeLocation` varchar(255) DEFAULT NULL,
+  `pix_gateway_status` varchar(45) DEFAULT NULL,
+  `pix_gateway_duration` int DEFAULT NULL,
+  `pix_gateway_date_expiration` datetime DEFAULT NULL,
+  `pag_notificado_estab` char(1) DEFAULT NULL,
+  `pag_notificado_pagador` char(1) DEFAULT NULL,
+  `pag_repasse` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`idPagamento`),
+  KEY `fk_pagamento_pedido1_idx` (`pedido_idPedido`),
+  CONSTRAINT `fk_pagamento_pedido1` FOREIGN KEY (`pedido_idPedido`) REFERENCES `pedido` (`idPedido`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pagamento`
+--
+
+LOCK TABLES `pagamento` WRITE;
+/*!40000 ALTER TABLE `pagamento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pagamento` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pedido`
+--
+
+DROP TABLE IF EXISTS `pedido`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pedido` (
+  `idPedido` int NOT NULL,
+  `dataRegistro` timestamp NOT NULL,
+  `valorTotal` decimal(10,2) NOT NULL,
+  `status` char(1) NOT NULL,
+  `totalParcelas` int NOT NULL,
+  `Pessoa_idPessoa` int DEFAULT NULL,
+  `vencimentoPrimeiraParcela` datetime DEFAULT NULL,
+  `cliente_nome` varchar(75) DEFAULT NULL,
+  `Pessoa_idPessoa_registrou` int NOT NULL,
+  `empresa_idEmpresa` int NOT NULL,
+  PRIMARY KEY (`idPedido`),
+  KEY `fk_pedido_Pessoa1_idx` (`Pessoa_idPessoa`),
+  KEY `fk_pedido_empresa1_idx` (`empresa_idEmpresa`),
+  KEY `fk_pedido_Pessoa2_idx` (`Pessoa_idPessoa_registrou`),
+  CONSTRAINT `fk_pedido_empresa1` FOREIGN KEY (`empresa_idEmpresa`) REFERENCES `empresa` (`idEmpresa`),
+  CONSTRAINT `fk_pedido_Pessoa1` FOREIGN KEY (`Pessoa_idPessoa`) REFERENCES `pessoa` (`idPessoa`),
+  CONSTRAINT `fk_pedido_Pessoa2` FOREIGN KEY (`Pessoa_idPessoa_registrou`) REFERENCES `pessoa` (`idPessoa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pedido`
+--
+
+LOCK TABLES `pedido` WRITE;
+/*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pessoa`
+--
+
+DROP TABLE IF EXISTS `pessoa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pessoa` (
+  `idPessoa` int NOT NULL AUTO_INCREMENT,
+  `nomeCompleto` varchar(75) DEFAULT NULL,
+  `CPF` int DEFAULT NULL,
+  `telefone` char(13) NOT NULL,
+  `email` varchar(75) DEFAULT NULL,
+  `senha` varchar(75) DEFAULT NULL,
+  `ativo` bit(1) NOT NULL,
+  `dataRegistro` datetime NOT NULL,
+  `dataCadastrou` datetime DEFAULT NULL,
+  `hashNovaSenha` varchar(75) DEFAULT NULL,
+  `hashNovaSenhaData` datetime DEFAULT NULL,
+  `dataUltimaAtualizacao` timestamp NOT NULL,
+  `codAfiliado` varchar(45) DEFAULT NULL,
+  `social_ig_uuid` varchar(100) DEFAULT NULL,
+  `social_ig_user` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idPessoa`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pessoa`
+--
+
+LOCK TABLES `pessoa` WRITE;
+/*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
+INSERT INTO `pessoa` VALUES (1,'Fulano de Tal',1,'+551234567890','fulano@example.com','senha123',_binary '','2024-04-05 16:47:47',NULL,NULL,NULL,'2024-04-05 19:47:47','AF123',NULL,NULL);
+/*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-04-05 18:28:33

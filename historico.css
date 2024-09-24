@@ -1,0 +1,135 @@
+.tab {
+    background-color: #A91528!important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+}
+
+#menu img {
+    width: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.secao_historico {
+    margin: 20px auto;
+}
+
+.card_historico {
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 10px;
+    transition: .3s;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.card_historico img {
+    margin: 10px;
+    border-radius: 20px;
+    width: 130px;
+}
+
+.card_historico .info_card_historico {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.card_historico .historico_nome_produto {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.card_historico p {
+    margin: 5px 0;
+    font-size: .8em;
+}
+
+.card_historico .btn-card-historico {
+    text-align: end;
+    font-size: .85em;
+}
+
+.card_historico a {
+    color: #872121;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.card_historico a:hover {
+    color: #fff;
+}
+
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rodape {
+    color: white;
+}
+
+/* Estilos responsivos */
+
+/* Estilos para telas pequenas (até 576px) */
+@media (max-width: 576px) {
+    .secao_historico {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .card_historico {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card_historico img {
+        width: 100px;
+        margin: 10px auto;
+    }
+}
+
+/* Estilos para telas médias (de 576px a 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .secao_historico {
+        width: 90%;
+        padding: 0 15px;
+    }
+}
+
+/* Estilos para telas grandes (acima de 768px) */
+@media (min-width: 768px) {
+    .secao_historico {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .card_historico {
+        width: calc(50% - 40px);
+    }
+}

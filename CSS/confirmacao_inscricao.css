@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tab {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu img {
+    width: 40px;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Estilização do QR Code */
+#qrcode {
+    margin: 20px auto; /* Centraliza horizontalmente */
+    display: block;
+    text-align: center;
+    margin-left: 42%;
+}
+
+/* Formulário */
+form {
+    margin-top: 30px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="email"],
+form input[type="hidden"],
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #A91528;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.rodape {
+    color: white;
+}

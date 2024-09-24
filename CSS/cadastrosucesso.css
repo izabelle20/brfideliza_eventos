@@ -1,0 +1,79 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da barra de navegação */
+.tab {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu img {
+    width: 40px;
+}
+
+/* Estilo do contêiner principal */
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin-top: 100px; /* Margem superior */
+}
+
+/* Estilo do alerta */
+.alert {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 50%; /* Ocupa no máximo 50% da largura da tela */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.alert a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.alert a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do rodapé */
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rodape {
+    color: white;
+}

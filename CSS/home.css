@@ -1,0 +1,180 @@
+.tab {
+    background-color: #A91528!important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+}
+
+#menu img {
+    width: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#barra_pesquisa {
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#card {
+    background-color: #c9c9c9;
+    width: 16rem;
+    margin-bottom: 10%;
+}
+
+#card_principal_cadastro {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#Card_principal {
+    background-color: #b9b9b9;
+    margin-top: 6%;
+    margin-left: 10%;
+    width: 77%;
+    display: flex;
+    border-radius: 2%;
+}
+
+#card_direita {
+    margin: auto;
+    background-color: #A91528;
+    border-radius: 2%;
+}
+
+#card_direita h1 {
+    text-align: center;
+    color: white;
+}
+
+#card_esquerda h1 {
+    color: white;
+}
+
+#card_esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.x {
+    margin: 120px;
+}
+
+.entrada {
+    margin-left: 35%;
+}
+
+.form-control {
+    width: 80%!important;
+    margin-left: 10%;
+}
+
+.form-login a {
+    margin-left: 36%;
+    margin-top: 5%;
+}
+
+.form-label {
+    margin-left: 10%;
+    margin-bottom: 2%;
+}
+
+#botao_login {
+    margin-left: 25%;
+    margin-top: 8%;
+    margin-bottom: 7%;
+}
+
+#botao_cadastro {
+    margin-left: 25%;
+    margin-top: 8%;
+    margin-bottom: 7%;
+}
+
+.btn-entrar {
+    color: #FFF;
+    background-color: #DC3545;
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 1.1em;
+}
+
+.btn-entrar:hover {
+    border-color: 1px solid black;
+    box-shadow: 0px 0px 5px black;
+    color: white;
+}
+
+.btn-cadastrar {
+    color: #FFF;
+    background-color: #DC3545;
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 1.1em;
+}
+
+.btn-cadastrar:hover {
+    border-color: 1px solid black;
+    box-shadow: 0px 0px 5px black;
+    color: white;
+}
+
+.logo_grande {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.logo_grande img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 10px;
+}
+
+
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white; /* Certifica-se de que o texto seja branco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rodape {
+    color: white;
+}
+

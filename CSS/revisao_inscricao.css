@@ -1,0 +1,112 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o cabeçalho */
+.navbar {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adicionei um padding para espaçamento interno */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.navbar img {
+    height: 30px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+#menu a img {
+    height: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+/* Estilos para o conteúdo principal */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o rodapé */
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+}
+
+.rodape {
+    margin-top: auto;
+}

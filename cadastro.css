@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tab {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu img {
+    width: 40px;
+}
+
+/* Card Principal */
+#card_principal_cadastro {
+    margin: 6% auto;
+    width: 80%;
+    display: flex;
+    border-radius: 2%;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+#card_direita {
+    background-color: #A91528;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+#card_direita h1 {
+    margin-bottom: 20px;
+}
+
+#card_direita img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.form-login {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-login .form-label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-login .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#botao_cadastro {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    color: #FFF;
+    background-color: #DC3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#botao_cadastro:hover {
+    box-shadow: 0px 0px 5px black;
+}
+
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rodape {
+    color: white;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    #navbar_marca {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #logo img {
+        width: 50px;
+    }
+
+    #menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #menu img {
+        width: 30px;
+    }
+
+    #card_principal_cadastro {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #card_direita {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-login {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    #logo {
+        font-size: 24px;
+    }
+
+    #logo img {
+        width: 40px;
+    }
+
+    #menu img {
+        width: 25px;
+    }
+
+    #card_principal_cadastro {
+        margin: 5% auto;
+        width: 90%;
+        padding: 5px;
+    }
+
+    #card_direita h1 {
+        font-size: 1.2em;
+    }
+
+    #card_direita {
+        padding: 15px;
+    }
+
+    .form-login {
+        width: 100%;
+    }
+
+    .form-login .form-control {
+        padding: 8px;
+    }
+
+    #botao_cadastro {
+        padding: 8px 10px;
+        font-size: 1em;
+    }
+}

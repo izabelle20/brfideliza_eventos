@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tab {
+    background-color: #A91528 !important;
+}
+
+#navbar_marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 30px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#menu {
+    width: 200px;
+}
+
+#menu img {
+    width: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.container {
+    max-width: 1200px; /* Aumentei para 1200px para acomodar melhor o layout dividido */
+    margin: 20px auto;
+    padding: 20px;
+    display: flex; /* Flexbox para layout em linha */
+    justify-content: space-between; /* Espaço entre as colunas */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.row {
+    width: 100%; /* Garante que a linha ocupa 100% da largura disponível */
+    display: flex;
+    flex-wrap: wrap; /* Garante que as colunas possam quebrar para baixo em telas menores */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.col-left, .col-right {
+    flex-basis: calc(50% - 20px); /* 50% de largura, subtraindo a margem */
+    margin-bottom: 20px;
+}
+
+.event-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    color: #A91528;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #A91528;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #761621;
+}
+
+footer {
+    height: 50px;
+    background-color: #A91528;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rodape {
+    color: white;
+}
